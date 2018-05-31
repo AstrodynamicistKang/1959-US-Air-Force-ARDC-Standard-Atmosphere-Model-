@@ -31,6 +31,8 @@ Note on the units of the arguments accepted, i.e. x in the above case:
 | temp(x) | m, meters | K, Kelvin |
 | pres(x) | m, meters | Pa, Pascal |
 | dens(x) | m, meters | kg m^-3 |
+| pot2met(x) | any length unit | same length unit as input |
+| met2pot(x) | any length unit | same length unit as input |
 
 ## Formulae
 
