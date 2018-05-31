@@ -78,18 +78,14 @@ def pres(x):
                     if x <= geopotential_altitude[geopotential_altitude.index(i) + 1]:
                         if lapse_rate[geopotential_altitude.index(i)] != 0:
                             p_temp = p_temp*((temp(i)/(temp(i) + (lapse_rate[geopotential_altitude.index(i)])*(x - i)))**(g_0/(R*lapse_rate[geopotential_altitude.index(i)])))
-                            print(p_temp, 'a', sep='')
                         elif lapse_rate[geopotential_altitude.index(i)] == 0:
                             p_temp = p_temp*exp((-g_0*(x - i))/(R*temp(i)))
-                            print(p_temp, 'b', sep='')
                     elif x > geopotential_altitude[geopotential_altitude.index(i) + 1]:
                         a = geopotential_altitude[geopotential_altitude.index(i) + 1]
                         if lapse_rate[geopotential_altitude.index(i)] != 0:
                             p_temp = p_temp*((temp(i)/(temp(i) + (lapse_rate[geopotential_altitude.index(i)])*(a - i)))**(g_0/(R*lapse_rate[geopotential_altitude.index(i)])))
-                            print(p_temp, 'c', sep='')
                         elif lapse_rate[geopotential_altitude.index(i)] == 0:
                             p_temp = p_temp*exp((-g_0*(a - i))/(R*temp(i)))
-                            print(p_temp, 'd', sep='')
             return p_temp
                              
 def dens(x):
@@ -107,17 +103,13 @@ def dens(x):
                     if x <= geopotential_altitude[geopotential_altitude.index(i) + 1]:
                         if lapse_rate[geopotential_altitude.index(i)] != 0:
                             rho_temp = rho_temp*((temp(i)/(temp(i) + (lapse_rate[geopotential_altitude.index(i)])*(x - i)))**((g_0/(R*lapse_rate[geopotential_altitude.index(i)]) + 1)))
-                            print(rho_temp, 'a', sep='')
                         elif lapse_rate[geopotential_altitude.index(i)] == 0:
                             rho_temp = rho_temp*exp((-g_0*(x - i))/(R*temp(i)))
-                            print(rho_temp, 'b', sep='')
                     elif x > geopotential_altitude[geopotential_altitude.index(i) + 1]:
                         a = geopotential_altitude[geopotential_altitude.index(i) + 1]
                         if lapse_rate[geopotential_altitude.index(i)] != 0:
                             rho_temp = rho_temp*((temp(i)/(temp(i) + (lapse_rate[geopotential_altitude.index(i)])*(a - i)))**((g_0/(R*lapse_rate[geopotential_altitude.index(i)]) + 1)))
-                            print(rho_temp, 'c', sep='')
                         elif lapse_rate[geopotential_altitude.index(i)] == 0:
                             rho_temp = rho_temp*exp((-g_0*(a - i))/(R*temp(i)))
-                            print(rho_temp, 'd', sep='')
             return rho_temp
 
